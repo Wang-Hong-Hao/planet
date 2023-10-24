@@ -1,0 +1,25 @@
+body[data-theme='dark'] {
+  --layerColor: #353535;/*层颜色*/
+  --backgroundColor: #212121; /*背景颜色*/
+  --fontColor: #fff; /*文字颜色*/
+  --borderColor: #d9d9d9; /*边框颜色，按钮、输入框*/
+  --borderRadius: 3px; /*圆角*/
+  --successColor: #1b904e; /*成功色*/
+  --waringColor: #faad14; /*警告色*/
+  --errorColor: #f4615c; /*错误色*/
+  --infoColor: #1890ff; /*提示色*/
+  --dangerColor: #ff7875; /*危险色*/
+}
+
+body[data-theme='light'] {
+  --layerColor: #f4f5f5; /**层颜色**/
+  --backgroundColorColor: #f4f5f5; /**背景颜色**/
+  --fontColor: #212121; /*文字颜色*/
+  --borderColor: #d9d9d9; /*边框颜色，按钮、输入框*/
+  --borderRadius: 3px; /*圆角*/
+  --successColor: #1e80ff; /*成功色*/
+  --waringColor: #faad14; /*警告色*/
+  --errorColor: #f4615c; /*错误色*/
+  --infoColor: #1890ff; /*提示色*/
+  --dangerColor: #ff7875; /*危险色*/
+}

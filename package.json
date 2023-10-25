@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "start": "node ./src/readMd.js"
+    "start": "node ./src/utils/readMd.js"
   },
   "dependencies": {
     "axios": "^1.5.1",

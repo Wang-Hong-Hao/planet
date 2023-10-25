@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory, RouteRecordRaw, } from 'vue-router'
 import { menuList } from '@/setting'
 /* title:string; 页面标题，通常必选。
 icon?:string; 图标，一般配合菜单使用。
@@ -19,21 +19,21 @@ const routeOfMenu = menuList.map((item) => {
       keepAlive: true,
       requireAuth: true,
     },
-    component: () => import(`@/layout/${item.path}.vue`),
+    component: () => import(`@/views${item.path}/index.vue`),
   }
 })
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    name: 'Home',
+    name: 'blog',
     meta: {
-      title: '首页',
+      title: '笔记',
       keepAlive: true,
       requireAuth: true,
     },
-    component: () => import('@/layout/myHome.vue'),
-    children: routeOfMenu,
+    component: () => import('@/views/myBlog/index.vue'),
   },
+  ...routeOfMenu
 ]
 const router = createRouter({
   history: createWebHistory(),

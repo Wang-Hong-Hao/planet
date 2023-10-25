@@ -1,19 +1,25 @@
 <template>
   <span class="nav">
     <span v-for="(item, index) in menu" :key="index" class="space-s-l gap-s-r">
-      <router-link :to="item.path">{{ (item.title, item.path) }}</router-link>
+      <router-link :to="item.path">{{ item.title }}</router-link>
     </span>
     <span class="avatar gap-l-l">
-      <span />
+      <img src="@/assets/img/avatar.jpg">
     </span>
   </span>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts">
 import { menuList } from "@/setting";
-import { ref, reactive } from "vue";
+import { ref } from "vue";
+export default {
+  setup() {
+    const menu = ref(menuList);
 
-const menu = ref(menuList);
+    return { menu }
+  }
+}
+
 </script>
 
 <style lang="scss" scoped>
@@ -21,15 +27,17 @@ const menu = ref(menuList);
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 100%;
+  height: 3.75rem;
   padding: 0 20px;
-  background-color: var(--bgColor);
+  background-color: var(--layerColor);
 
   .avatar {
-    span {
+    line-height: 100%;
+
+    img {
       display: inline-block;
-      width: 50px;
-      height: 50px;
+      width: 2.5rem;
+      height: 2.5rem;
       border-radius: 50%;
       background-color: black;
     }

@@ -4,34 +4,43 @@
       <myMenu />
     </header>
     <div class="container">
-      <Transition>
-        <router-view>
-          <keep-alive />
-        </router-view>
-      </Transition>
+      <slot />
     </div>
     <footer />
   </div>
 </template>
-<script setup lang="ts">
+<script lang="ts">
 import myMenu from './myMenu.vue'
+
+export default {
+  components: {
+    myMenu
+  },
+  setup() {
+    return {}
+  }
+}
 </script>
 <style lang="scss" scoped>
 .home {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: var(--backgroundColor);
 
   header {
-    height: 80px;
+    height: 3.75rem;
   }
 
   .container {
     flex: 1;
+    max-width: 39.375rem;
+    margin: 0 auto;
+    padding: 3.125rem 1.25rem 3.125rem 1.25rem;
   }
 
   footer {
-    height: 60px;
+    height: 3.75rem;
   }
 }
 </style>

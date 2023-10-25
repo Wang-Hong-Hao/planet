@@ -26,15 +26,16 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--backgroundColor);
 
   header {
     height: 3.75rem;
   }
 
   .container {
+    color: var(--fontColor);
     flex: 1;
     max-width: 39.375rem;
+    width: 100%;
     margin: 0 auto;
     padding: 3.125rem 1.25rem 3.125rem 1.25rem;
   }

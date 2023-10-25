@@ -8,8 +8,12 @@ export const useAppStore = defineStore({
     }
   },
   actions: {
-    toggleTheme() {
-      this.theme = this.theme === 'light' ? 'dark' : 'light'
+    toggleTheme(theme?: string) {
+      if (theme) {
+        this.theme = theme
+      } else {
+        this.theme = this.theme === 'light' ? 'dark' : 'light'
+      }
       const body = document.body
       body.setAttribute('data-theme', this.theme)
     }

@@ -21,6 +21,8 @@ export default {
     const router = useRouter()
 
     const blogList = ref<BlogArray>(blog)
+    console.log(blog);
+
 
     const viewDetails = function (index: number): void {
       router.push({

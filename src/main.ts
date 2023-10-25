@@ -6,7 +6,7 @@ import router from '@/router/index'
 import 'normalize.css/normalize.css'
 import '@/styles/golbal.scss'
 import '@/styles/skin.css'
-import 'github-markdown-css'
+// import 'github-markdown-css'
 // 引入字体
 import '@/assets/fonts/fonts-post.css';
 import '@/assets/fonts/fonts-shared.css';

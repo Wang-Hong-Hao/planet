@@ -5,38 +5,43 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
-import blog from '@/blog/blog.json'
-
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+import blog from "@/blog/blog.json";
 interface Blog {
-  fileName: string
-  content: string
-}
-interface BlogArray {
-  [index: number]: Blog
+  fileName: string;
+  content: string;
 }
 export default {
   setup() {
-    const router = useRouter()
-
-    const blogList = ref<BlogArray>(blog)
-    console.log(blog);
-
+    const router = useRouter();
+    const blogList = ref<Blog[]>(blog);
 
     const viewDetails = function (index: number): void {
       router.push({
-        path: '/detail',
+        path: "/detail",
         query: {
           index,
-        }
-      })
+        },
+      });
+    };
 
-    }
+    // const document = new Document({})
+    // blogList.value.forEach((blog, index) => {
+    //   document.add({
+    //     id: index,
+    //     ...blog
+    //   })
+    // })
+    // const search = function () {
+    //   const res = document.search('setChannel.onmessage')
+    //   console.log(res);
 
-    return { blogList, viewDetails }
-  }
-}
+    // }
+
+    return { blogList, viewDetails };
+  },
+};
 </script>
 
 <style lang="scss" scoped>

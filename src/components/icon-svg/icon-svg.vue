@@ -7,19 +7,19 @@
 </template>
 
 <script lang="ts">
-import { computed } from 'vue'
+import { computed, defineComponent } from 'vue'
 // 声明 `props` 和 `return` 的数据类型
 interface Data {
   [key: string]: unknown
 }
-export default {
+export default defineComponent({
   name: 'IconSvg',
   setup(props: Data) {
     const iconName = computed(() => `#icon-${props.iconClass}`)
     return { iconName }
   }
 
-}
+})
 </script>
 
 <style scoped lang="scss">

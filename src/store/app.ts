@@ -5,6 +5,7 @@ export const useAppStore = defineStore({
   state: () => {
     return {
       theme: 'light',
+      search: false,
     }
   },
   actions: {
@@ -16,6 +17,9 @@ export const useAppStore = defineStore({
       }
       const body = document.body
       body.setAttribute('data-theme', this.theme)
+    },
+    toggleSearch() {
+      this.search = !this.search
     }
   }
 })

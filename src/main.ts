@@ -10,8 +10,6 @@ import '@/styles/skin.css'
 // 引入字体
 import '@/assets/fonts/fonts-post.css';
 import '@/assets/fonts/fonts-shared.css';
-// 引入UI
-import '@/components/xy-ui/index.js'
 // 引入symbol图标js
 import '@/assets/iconfont/iconfont.js'
 // 引入icon-svg组件

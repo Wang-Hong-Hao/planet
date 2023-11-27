@@ -1,8 +1,6 @@
 <template>
   <span class="nav">
-    <!-- <span v-for="(item, index) in menu" :key="index" class="space-s-l gap-s-r">
-      <router-link :to="item.path">{{ item.title }}</router-link>
-    </span> -->
+    <search style="margin-right: 20px;" />
     <span class="theme" @click="toogleTheme">
       <svg v-if="appStore.theme === 'dark'" class="icon sun" aria-hidden="true">
         <use xlink:href="#icon-sun_line" />
@@ -21,8 +19,11 @@
 import { menuList } from "@/setting";
 import { ref } from "vue";
 import { useAppStore } from '@/store/app'
-
+import search from '@/components/search/index.vue'
 export default {
+  components: {
+    search
+  },
   setup() {
 
     const appStore = useAppStore()

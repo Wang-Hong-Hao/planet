@@ -1,4 +1,6 @@
 body[data-theme='dark'] {
+  --themeBackground:#fa5143;
+  --accentColour:#fa5143;
   --layerColor: #353535;/*层颜色*/
   --backgroundColor: #212121; /*背景颜色*/
   --fontColor: #fff; /*文字颜色*/
@@ -12,8 +14,10 @@ body[data-theme='dark'] {
 }
 
 body[data-theme='light'] {
+  --themeBackground:#fa5143;
+  --accentColour:#fa5143;
   --layerColor: #f4f5f5; /**层颜色**/
-  --backgroundColorColor: #f4f5f5; /**背景颜色**/
+  --backgroundColor: #fff; /**背景颜色**/
   --fontColor: #212121; /*文字颜色*/
   --borderColor: #d9d9d9; /*边框颜色，按钮、输入框*/
   --borderRadius: 3px; /*圆角*/

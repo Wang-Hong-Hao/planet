@@ -1,5 +1,6 @@
 # planet
 
+> md文件放在src/markdown目录下
 ## Project setup
 ```
 pnpm install
